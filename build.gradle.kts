@@ -11,7 +11,7 @@ plugins {
 }
 
 repositories {
-  jcenter() 
+  jcenter()
 }
 
 dependencies {
@@ -28,4 +28,11 @@ val dokkaJar by tasks.creating(Jar::class) {
   description = "Assembles Kotlin docs with Dokka"
   classifier = "javadoc"
   from(dokka)
+}
+
+val sourceJar by tasks.creating(Jar::class) {
+  group = JavaBasePlugin.DOCUMENTATION_GROUP
+  description = "Assembles Kotlin sources"
+  classifier = "src"
+  from(java.sourceSets["main"].allSource)
 }
