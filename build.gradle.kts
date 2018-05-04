@@ -4,3 +4,15 @@
  * This is a general purpose Gradle build.
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
+
+plugins {
+  kotlin("jvm") version "1.2.41"
+}
+
+repositories {
+  jcenter() 
+}
+
+dependencies {
+  implementation(kotlin("stdlib", "1.2.41"))
+}
