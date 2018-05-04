@@ -5,7 +5,11 @@
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
 
+group = "com.denormans"
+version = "0.0.1"
+
 plugins {
+  `maven-publish`
   kotlin("jvm") version "1.2.41"
   id("org.jetbrains.dokka") version "0.9.16"
 }
@@ -35,4 +39,19 @@ val sourceJar by tasks.creating(Jar::class) {
   description = "Assembles Kotlin sources"
   classifier = "src"
   from(java.sourceSets["main"].allSource)
+}
+
+publishing {
+  publications {
+    create("default", MavenPublication::class.java) {
+      from(components["java"])
+      artifact(dokkaJar)
+      artifact(sourceJar)
+    }
+  }
+  repositories {
+    maven {
+      url = uri("$buildDir/repository")
+    }
+  }
 }
