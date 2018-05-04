@@ -7,6 +7,7 @@
 
 plugins {
   kotlin("jvm") version "1.2.41"
+  id("org.jetbrains.dokka") version "0.9.16"
 }
 
 repositories {
@@ -15,4 +16,16 @@ repositories {
 
 dependencies {
   implementation(kotlin("stdlib", "1.2.41"))
+}
+
+val dokka by tasks.getting(org.jetbrains.dokka.gradle.DokkaTask::class) {
+  outputFormat = "html"
+  outputDirectory = "$buildDir/javadoc"
+}
+
+val dokkaJar by tasks.creating(Jar::class) {
+  group = JavaBasePlugin.DOCUMENTATION_GROUP
+  description = "Assembles Kotlin docs with Dokka"
+  classifier = "javadoc"
+  from(dokka)
 }
