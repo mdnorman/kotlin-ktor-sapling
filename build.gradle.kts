@@ -37,7 +37,7 @@ val mainSrcSet = java.sourceSets["main"]
 val sourceJar by tasks.creating(Jar::class) {
   group = JavaBasePlugin.DOCUMENTATION_GROUP
   description = "Assembles Kotlin sources"
-  classifier = "src"
+  classifier = "sources"
   from(mainSrcSet.allSource)
 }
 
