@@ -127,6 +127,9 @@ coverage
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
+# Distribution output
+dist
+
 # Dependency directory
 node_modules
 
@@ -138,6 +141,13 @@ node_modules
 
 .sass-cache/
 *.css.map
+
+
+################################################################################
+### Serverless.gitignore
+################################################################################
+
+.serverless/
 
 
 ################################################################################
