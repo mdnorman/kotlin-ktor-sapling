@@ -32,7 +32,7 @@ dependencies {
   testImplementation(kotlin("test-junit", kotlinVersion))
 }
 
-val mainSrcSet = java.sourceSets["main"]
+val mainSrcSet = sourceSets["main"]
 
 val sourceJar by tasks.creating(Jar::class) {
   group = JavaBasePlugin.DOCUMENTATION_GROUP
