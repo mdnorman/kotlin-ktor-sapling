@@ -24,11 +24,11 @@ repositories {
 dependencies {
   implementation(kotlin("stdlib-jdk8", kotlinVersion))
   implementation(kotlin("reflect", kotlinVersion))
-  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.0")
-  implementation("org.slf4j:slf4j-simple:1.7.5")
-  implementation("io.github.microutils:kotlin-logging:1.5.4")
-  testImplementation("junit:junit:4.12")
-  testImplementation("com.natpryce:hamkrest:1.4.2.2")
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.+")
+  implementation("org.slf4j:slf4j-simple:1.7.+")
+  implementation("io.github.microutils:kotlin-logging:1.5.+")
+  testImplementation("junit:junit:4.+")
+  testImplementation("com.natpryce:hamkrest:1.4.+")
   testImplementation(kotlin("test", kotlinVersion))
   testImplementation(kotlin("test-junit", kotlinVersion))
 }
