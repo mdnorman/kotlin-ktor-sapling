@@ -9,6 +9,7 @@ group = "com.denormans"
 version = "0.0.1"
 
 val kotlinVersion = "1.3.0"
+val ktorVersion = "1.0.+"
 
 plugins {
   kotlin("jvm") version "1.3.0"
@@ -19,9 +20,16 @@ plugins {
 
 repositories {
   jcenter()
+  maven("https://kotlin.bintray.com/ktor")
 }
 
 dependencies {
+  compile("io.ktor:ktor-server-netty:$ktorVersion")
+  compile("io.ktor:ktor-auth:$ktorVersion")
+  compile("io.ktor:ktor-auth-jwt:$ktorVersion")
+  compile("io.ktor:ktor-jackson:$ktorVersion")
+  compile("io.ktor:ktor-metrics:$ktorVersion")
+  compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.+")
   implementation(kotlin("stdlib-jdk8", kotlinVersion))
   implementation(kotlin("reflect", kotlinVersion))
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.+")
