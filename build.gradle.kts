@@ -19,6 +19,7 @@ plugins {
 }
 
 repositories {
+  mavenLocal()
   jcenter()
   maven("https://kotlin.bintray.com/ktor")
 }
