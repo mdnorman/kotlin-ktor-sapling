@@ -8,3 +8,6 @@
  */
 
 rootProject.name = 'kotlin-gradle-sapling'
+
+enableFeaturePreview('STABLE_PUBLISHING')
+
