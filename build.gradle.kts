@@ -8,11 +8,11 @@
 group = "com.denormans"
 version = "0.0.1"
 
-val kotlinVersion = "1.3.0"
+val kotlinVersion = "1.3.20"
 val junitVersion = "5.3.+"
 
 plugins {
-  kotlin("jvm") version "1.3.0"
+  kotlin("jvm") version "1.3.20"
   id("org.jetbrains.dokka") version "0.9.16"
   java
   `maven-publish`
