@@ -8,11 +8,12 @@
 group = "com.denormans"
 version = "0.0.1"
 
-val kotlinVersion = "1.3.0"
+val kotlinVersion = "1.3.20"
 val ktorVersion = "1.0.+"
+val junitVersion = "5.3.+"
 
 plugins {
-  kotlin("jvm") version "1.3.0"
+  kotlin("jvm") version "1.3.20"
   id("org.jetbrains.dokka") version "0.9.16"
   java
   `maven-publish`
@@ -36,8 +37,11 @@ dependencies {
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.+")
   implementation("org.slf4j:slf4j-simple:1.7.+")
   implementation("io.github.microutils:kotlin-logging:1.5.+")
-  testImplementation("junit:junit:4.+")
-  testImplementation("com.natpryce:hamkrest:1.4.+")
+  testImplementation("com.natpryce:hamkrest:1.7.+")
+  testCompile("org.junit.jupiter:junit-jupiter-api:$junitVersion")
+  testCompile("org.junit.jupiter:junit-jupiter-params:$junitVersion")
+  testRuntime("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
+  testRuntime("org.junit.vintage:junit-vintage-engine:$junitVersion")
   testImplementation(kotlin("test", kotlinVersion))
   testImplementation(kotlin("test-junit", kotlinVersion))
 }
@@ -61,6 +65,13 @@ val dokkaJar by tasks.creating(Jar::class) {
   description = "Assembles Kotlin docs with Dokka"
   classifier = "javadoc"
   from(dokka)
+}
+
+tasks.withType<Test> {
+  useJUnitPlatform()
+  testLogging {
+    events("passed", "skipped", "failed")
+  }
 }
 
 publishing {

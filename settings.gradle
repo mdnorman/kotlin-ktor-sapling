@@ -8,6 +8,3 @@
  */
 
 rootProject.name = 'kotlin-ktor-sapling'
-
-enableFeaturePreview('STABLE_PUBLISHING')
-
