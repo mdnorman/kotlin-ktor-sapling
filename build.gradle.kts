@@ -5,7 +5,7 @@
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
 
-group = "com.denormans"
+group = "CHANGEME"
 version = "0.0.1"
 
 val kotlinVersion = "1.3.30"
