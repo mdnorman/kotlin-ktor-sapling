@@ -24,11 +24,11 @@ repositories {
 }
 
 dependencies {
-  implementation(kotlin("stdlib-jdk8", kotlinVersion))
-  implementation(kotlin("reflect", kotlinVersion))
+  implementation("io.github.microutils:kotlin-logging:1.6.+")
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.+")
   implementation("org.slf4j:slf4j-simple:1.7.+")
-  implementation("io.github.microutils:kotlin-logging:1.6.+")
+  implementation(kotlin("reflect", kotlinVersion))
+  implementation(kotlin("stdlib-jdk8", kotlinVersion))
   testImplementation("com.natpryce:hamkrest:1.7.+")
   testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
   testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
