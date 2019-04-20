@@ -9,7 +9,7 @@ group = "CHANGEME"
 version = "0.0.1"
 
 val kotlinVersion = "1.3.30"
-val ktorVersion = "1.0.+"
+val ktorVersion = "1.1.+"
 val junitVersion = "5.4.+"
 
 plugins {
