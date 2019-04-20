@@ -28,11 +28,11 @@ repositories {
 dependencies {
   implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.+")
   implementation("io.github.microutils:kotlin-logging:1.6.+")
-  implementation("io.ktor:ktor-server-netty:$ktorVersion")
   implementation("io.ktor:ktor-auth:$ktorVersion")
   implementation("io.ktor:ktor-auth-jwt:$ktorVersion")
   implementation("io.ktor:ktor-jackson:$ktorVersion")
   implementation("io.ktor:ktor-metrics:$ktorVersion")
+  implementation("io.ktor:ktor-server-netty:$ktorVersion")
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.+")
   implementation("org.slf4j:slf4j-simple:1.7.+")
   implementation(kotlin("reflect", kotlinVersion))
