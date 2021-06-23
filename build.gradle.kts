@@ -18,7 +18,7 @@ val junitVersion = "5.4.+"
 
 plugins {
   kotlin("jvm") version "1.3.30"
-  id("org.jetbrains.dokka") version "0.9.18"
+  id("org.jetbrains.dokka") version "0.11.0-dev-59"
   java
   application
   id("com.github.johnrengelman.shadow") version "4.0.3"
