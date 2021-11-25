@@ -22,7 +22,7 @@ plugins {
 
 repositories {
   mavenLocal()
-  jcenter()
+  mavenCentral()
 }
 
 dependencies {
@@ -55,10 +55,7 @@ tasks.withType<KotlinCompile> {
   }
 }
 
-val dokka by tasks.getting(org.jetbrains.dokka.gradle.DokkaTask::class) {
-  outputFormat = "html"
-  outputDirectory = "$buildDir/javadoc"
-}
+val dokka by tasks.creating(org.jetbrains.dokka.gradle.DokkaTask::class)
 
 val dokkaJar by tasks.creating(Jar::class) {
   group = JavaBasePlugin.DOCUMENTATION_GROUP
