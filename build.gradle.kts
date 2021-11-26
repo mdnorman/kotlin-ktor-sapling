@@ -14,7 +14,7 @@ version = "0.0.1"
 val applicationClassName = "CHANGEME"
 
 val kotlinVersion = "1.3.61"
-val ktorVersion = "1.1.0"
+val ktorVersion = "1.6.5"
 val junitVersion = "5.8.1"
 
 plugins {
@@ -33,7 +33,7 @@ repositories {
 }
 
 dependencies {
-  implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.0")
+  implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.0")
   implementation("io.github.microutils:kotlin-logging:2.1.0")
   implementation("io.ktor:ktor-auth:$ktorVersion")
   implementation("io.ktor:ktor-auth-jwt:$ktorVersion")
