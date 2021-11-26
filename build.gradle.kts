@@ -18,8 +18,8 @@ val ktorVersion = "1.1.+"
 val junitVersion = "5.4.+"
 
 plugins {
-  kotlin("jvm") version "1.3.61"
-  id("org.jetbrains.dokka") version "1.5.0"
+  kotlin("jvm") version "1.6.0"
+  id("org.jetbrains.dokka") version "1.6.0"
   java
   application
   id("com.github.johnrengelman.shadow") version "4.0.3"
@@ -28,8 +28,8 @@ plugins {
 
 repositories {
   mavenLocal()
-  jcenter()
   maven("https://kotlin.bintray.com/ktor")
+  mavenCentral()
 }
 
 dependencies {
@@ -76,10 +76,7 @@ tasks.withType<KotlinCompile> {
   }
 }
 
-val dokka by tasks.getting(org.jetbrains.dokka.gradle.DokkaTask::class) {
-  outputFormat = "html"
-  outputDirectory = "$buildDir/javadoc"
-}
+val dokka by tasks.creating(org.jetbrains.dokka.gradle.DokkaTask::class)
 
 val dokkaJar by tasks.creating(Jar::class) {
   group = JavaBasePlugin.DOCUMENTATION_GROUP
