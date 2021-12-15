@@ -14,11 +14,11 @@ version = "0.0.1"
 val applicationClassName = "CHANGEME"
 
 val kotlinVersion = "1.3.61"
-val ktorVersion = "1.6.5"
-val junitVersion = "5.8.1"
+val ktorVersion = "1.6.7"
+val junitVersion = "5.8.2"
 
 plugins {
-  kotlin("jvm") version "1.6.0"
+  kotlin("jvm") version "1.6.10"
   id("org.jetbrains.dokka") version "1.6.0"
   java
   application
@@ -34,7 +34,7 @@ repositories {
 
 dependencies {
   implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.0")
-  implementation("io.github.microutils:kotlin-logging:2.1.0")
+  implementation("io.github.microutils:kotlin-logging:2.1.16")
   implementation("io.ktor:ktor-auth:$ktorVersion")
   implementation("io.ktor:ktor-auth-jwt:$ktorVersion")
   implementation("io.ktor:ktor-jackson:$ktorVersion")
