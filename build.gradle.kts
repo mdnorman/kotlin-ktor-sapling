@@ -11,11 +11,11 @@ group = "CHANGEME"
 version = "0.0.1"
 
 val kotlinVersion = "1.6.0"
-val junitVersion = "5.8.1"
+val junitVersion = "5.8.2"
 
 plugins {
-  kotlin("jvm") version "1.6.0"
-  id("org.jetbrains.dokka") version "1.6.0"
+  kotlin("jvm") version "1.6.10"
+  id("org.jetbrains.dokka") version "1.6.10"
   java
   `maven-publish`
 }
@@ -26,8 +26,8 @@ repositories {
 }
 
 dependencies {
-  implementation("io.github.microutils:kotlin-logging:2.1.0")
-  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+  implementation("io.github.microutils:kotlin-logging:2.1.21")
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
   implementation("org.slf4j:slf4j-simple:1.7.32")
   implementation(kotlin("reflect", kotlinVersion))
   implementation(kotlin("stdlib-jdk8", kotlinVersion))
