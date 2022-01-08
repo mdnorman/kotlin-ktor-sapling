@@ -28,8 +28,8 @@ plugins {
 
 repositories {
   mavenLocal()
-  maven("https://kotlin.bintray.com/ktor")
   mavenCentral()
+  maven("https://kotlin.bintray.com/ktor")
 }
 
 dependencies {
