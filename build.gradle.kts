@@ -33,7 +33,7 @@ repositories {
 }
 
 dependencies {
-  implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.0")
+  implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.1")
   implementation("io.github.microutils:kotlin-logging:2.1.21")
   implementation("io.ktor:ktor-auth:$ktorVersion")
   implementation("io.ktor:ktor-auth-jwt:$ktorVersion")
