@@ -1,0 +1,20 @@
+name: CI
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ '**' ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: openjdk:17.0.1-jdk
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+    - name: Build with Gradle
+      uses: gradle/gradle-build-action@v2.1.0
+      with:
+        arguments: build
