@@ -40,7 +40,7 @@ dependencies {
   implementation("io.ktor:ktor-jackson:$ktorVersion")
   implementation("io.ktor:ktor-metrics:$ktorVersion")
   implementation("io.ktor:ktor-server-netty:$ktorVersion")
-  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2")
   implementation("org.slf4j:slf4j-simple:2.0.7")
   implementation(kotlin("reflect", kotlinVersion))
   implementation(kotlin("stdlib-jdk8", kotlinVersion))
