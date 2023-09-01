@@ -15,7 +15,7 @@ val applicationClassName = "CHANGEME"
 
 val kotlinVersion = "1.9.10"
 val ktorVersion = "1.6.8"
-val junitVersion = "5.9.3"
+val junitVersion = "5.10.0"
 
 plugins {
   kotlin("jvm") version "1.7.22"
