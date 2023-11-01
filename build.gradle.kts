@@ -13,7 +13,7 @@ version = "0.0.1"
 
 val applicationClassName = "CHANGEME"
 
-val kotlinVersion = "1.9.10"
+val kotlinVersion = "1.9.20"
 val ktorVersion = "1.6.8"
 val junitVersion = "5.10.0"
 
