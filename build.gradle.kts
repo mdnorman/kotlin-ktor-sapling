@@ -41,7 +41,7 @@ dependencies {
   implementation("io.ktor:ktor-metrics:$ktorVersion")
   implementation("io.ktor:ktor-server-netty:$ktorVersion")
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
-  implementation("org.slf4j:slf4j-simple:2.0.9")
+  implementation("org.slf4j:slf4j-simple:2.0.10")
   implementation(kotlin("reflect", kotlinVersion))
   implementation(kotlin("stdlib-jdk8", kotlinVersion))
   testImplementation("com.natpryce:hamkrest:1.8.0.1")
