@@ -18,7 +18,7 @@ val ktorVersion = "1.6.8"
 val junitVersion = "5.10.1"
 
 plugins {
-  kotlin("jvm") version "1.7.22"
+  kotlin("jvm") version "1.9.23"
   id("org.jetbrains.dokka") version "1.9.10"
   java
   application
