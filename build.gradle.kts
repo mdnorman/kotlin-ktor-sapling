@@ -22,7 +22,7 @@ plugins {
   id("org.jetbrains.dokka") version "1.9.20"
   java
   application
-  id("com.github.johnrengelman.shadow") version "7.1.2"
+  id("com.github.johnrengelman.shadow") version "8.1.1"
   `maven-publish`
 }
 
