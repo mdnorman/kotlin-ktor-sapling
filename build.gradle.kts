@@ -13,12 +13,12 @@ version = "0.0.1"
 
 val applicationClassName = "CHANGEME"
 
-val kotlinVersion = "1.9.25"
+val kotlinVersion = "2.4.10"
 val ktorVersion = "1.6.8"
 val junitVersion = "5.13.0"
 
 plugins {
-  kotlin("jvm") version "1.7.22"
+  kotlin("jvm") version "2.4.10"
   id("org.jetbrains.dokka") version "1.9.20"
   java
   application
